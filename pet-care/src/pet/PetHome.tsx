@@ -1,12 +1,12 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Home.css';
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonText} from '@ionic/react';
+import './PetHome.css';
 
-const Home : React.FC = () => {
+const PetHome : React.FC = () => {
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Pet Details</IonTitle>
+                    <IonTitle>Pet Home</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
@@ -15,9 +15,10 @@ const Home : React.FC = () => {
                         <IonTitle size="large">Blank</IonTitle>
                     </IonToolbar>
                 </IonHeader>
+                <IonButton routerLink="/pets">Go to pet list</IonButton>
             </IonContent>
         </IonPage>
     );
 };
 
-export default Home;
+export default PetHome;
