@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IPetListRow } from "../interfaces/IPetListRow";
 
 
-const PetListRow : React.FC <IPetListRow> = ({birth_date, name}) => {
+const PetListRow : React.FC <IPetListRow> = ({age, name}) => {
 
     const [hidden, setHidden] = useState<boolean>(false)
 
@@ -14,7 +14,7 @@ const PetListRow : React.FC <IPetListRow> = ({birth_date, name}) => {
             <>
             <p onClick={handleClick}>{name}</p>
             {hidden&&
-            <p >{birth_date}</p>
+            <p >{age}</p>
             }
             </>
     );

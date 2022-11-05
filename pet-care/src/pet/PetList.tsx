@@ -17,7 +17,7 @@ const PetList : React.FC = () => {
                 {petList&&
 
                     <IonList>
-                        {petList.map((pet, i) => <PetListRow key={i} name={pet.name} birth_date={pet.birth_date}/>)}
+                        {petList.map((pet, i) => <PetListRow key={i} name={pet.name} age={pet.age}/>)}
                     </IonList>
                 }
                 <IonFabButton onClick={handleAddPet}/>

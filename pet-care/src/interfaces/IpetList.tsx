@@ -2,9 +2,12 @@
 
 
 export interface IPetList{
-    id : number,
     name : string,
-    birth_date : string
-    
+    date_of_birth : Date,
+
+    is_adpoted : boolean,
+
+    age: number
+
 }
 
