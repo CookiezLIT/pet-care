@@ -1,6 +1,7 @@
 import {IPetDetail} from "../interfaces/IPetDetail";
 import usePet from "../hooks/usePet";
 import {useParams} from "react-router";
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonText} from '@ionic/react';
 
 const PetDetail = () => {
 
@@ -11,17 +12,18 @@ const PetDetail = () => {
     const {pet} = usePet(query_param);
 
     return (
-            <>
-            <div>
-                <div>Pet name: {pet?.name}</div>
-            </div>
-            <div>
-                <p>Pet id: {pet?.id}</p>
-                <p>Pet age: {pet?.age}</p>
-                <p>Pet is adopted: {pet?.is_adopted}</p>
-                <p><>Pet date of birth: {pet?.date_of_birth}</></p>
-            </div>
-            </>
+
+            <IonPage>
+                <IonContent>
+                    <h1>Pet name: {pet?.name}</h1>
+
+
+                    <IonText><p>Pet id: {pet?.id}</p></IonText>
+                    <IonText><p>Pet age: {pet?.age}</p></IonText>
+                    <IonText><p>Pet is adopted: {pet?.is_adopted}</p></IonText>
+                    <IonText><p><>Pet date of birth: {pet?.date_of_birth}</></p></IonText>
+                </IonContent>
+            </IonPage>
     )
 
 
