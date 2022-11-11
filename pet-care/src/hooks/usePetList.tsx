@@ -6,6 +6,7 @@ const usePetList =  () => {
     const [petList, setPetList] = useState<IPetList[]>([])
     const handleAddPet = () => {
         axios.post("http://127.0.0.1:8000/pets/add_pet/", {name : "Spic", date_of_birth : "2022-06-15", is_adopted : "True", age : 1});
+        // can be improved!
         window.location.reload();
     }
 

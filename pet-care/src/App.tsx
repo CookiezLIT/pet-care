@@ -21,6 +21,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import PetDetail from "./pet/PetDetail";
 
 setupIonicReact();
 
@@ -37,6 +38,7 @@ const App: React.FC = () => (
         <Route exact path="/pets">
           <PetList/>
       </Route>
+          <Route path="/pet/:id" component={PetDetail}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

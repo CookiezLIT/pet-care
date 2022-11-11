@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { IPetListRow } from "../interfaces/IPetListRow";
+import {IonButton} from "@ionic/react";
 
-
-const PetListRow : React.FC <IPetListRow> = ({age, name}) => {
+const PetListRow : React.FC <IPetListRow> = ({id, age, name}) => {
 
     const [hidden, setHidden] = useState<boolean>(false)
 
@@ -14,7 +14,23 @@ const PetListRow : React.FC <IPetListRow> = ({age, name}) => {
             <>
             <p onClick={handleClick}>{name}</p>
             {hidden&&
-            <p >{age}</p>
+            <div>
+                <div>
+                    ID: {id}
+                </div>
+                <div>
+                    Age : {age}
+                </div>
+                <br/>
+
+                <IonButton onClick={event =>  {
+
+                    let redirect_url = "/pet/" + id
+                    console.log("Redirecting to page" + redirect_url)
+                    window.location.href=redirect_url
+                }}>Details</IonButton>
+                <br/>
+            </div>
             }
             </>
     );
