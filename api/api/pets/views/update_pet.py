@@ -13,9 +13,11 @@ class UpdatePet(APIView):
             raise Http404
 
     def put(self, request, id):
+        print("Request data for put")
+        print(request.data)
         pet = self.get_object(id)
         serializer = PetSerializer(pet,request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errros, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
