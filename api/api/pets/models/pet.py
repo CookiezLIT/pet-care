@@ -5,3 +5,5 @@ class Pet(models.Model):
     date_of_birth = models.DateField()
     is_adopted = models.BooleanField()
     age = models.IntegerField()
+
+
