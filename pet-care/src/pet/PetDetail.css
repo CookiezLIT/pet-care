@@ -1,0 +1,34 @@
+
+
+.pet_input {
+    border: 1px solid black;
+    width: 30%;
+    margin-bottom: 15px;
+
+}
+
+.pet_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pet_label {
+    margin-bottom: 8px;
+    margin-right : 8px;
+    font-weight: bold;
+}
+
+#pet_is_adopted_input {
+    border: none;
+    width: 15px;
+
+}
+
+.pet_adopted_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

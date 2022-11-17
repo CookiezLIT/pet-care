@@ -1,0 +1,21 @@
+.pet_list {
+    margin-left: 20px;
+    display : flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+
+}
+
+.pet_list p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.pet_title {
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight : bold;
+}

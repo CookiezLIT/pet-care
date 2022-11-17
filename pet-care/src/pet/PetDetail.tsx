@@ -13,6 +13,7 @@ import {
 } from '@ionic/react';
 import {useState} from "react";
 import updatePet from "../hooks/updatePet";
+import './PetDetail.css'
 
 const PetDetail = () => {
 
@@ -59,18 +60,18 @@ const PetDetail = () => {
                     </>
                     :
                     <>
-                    <IonList>
-                        <IonLabel>Pet name</IonLabel>
-                        <IonInput id="pet_name_input"></IonInput>
+                    <IonList className="pet_list">
+                        <IonLabel className="pet_label">Pet name</IonLabel>
+                        <IonInput id="pet_name_input" className="pet_input"></IonInput>
 
-                        <IonLabel>Pet age</IonLabel>
-                        <IonInput id="pet_age_input"></IonInput>
-
-                        <IonLabel>Pet is adopted</IonLabel>
-                        <IonCheckbox id="pet_is_adopted_input"></IonCheckbox>
-
-                        <IonLabel>Pet date of birth</IonLabel>
-                        <IonInput placeholder="year-month-day" id="pet_date_of_birth_input"></IonInput>
+                        <IonLabel className="pet_label">Pet age</IonLabel>
+                        <IonInput id="pet_age_input" className="pet_input"></IonInput>
+                        <div className="pet_adopted_wrapper">
+                            <IonLabel className="pet_label">Pet is adopted</IonLabel>
+                            <IonCheckbox id="pet_is_adopted_input" className="pet_input"></IonCheckbox>
+                        </div>
+                        <IonLabel className="pet_label">Pet date of birth</IonLabel>
+                        <IonInput placeholder="year-month-day" id="pet_date_of_birth_input" className="pet_input"></IonInput>
                     </IonList>
 
                     <IonButton onClick={handleUpdateClick}>Update Pet</IonButton>

@@ -1,0 +1,15 @@
+.pet_card {
+    //border : 0.5px solid black;
+    box-shadow: 5px 10px 18px;
+    border-radius : 8px;
+    margin-bottom: 20px;
+    margin-right : 20px;
+}
+
+.pet_detail_click {
+    cursor: pointer;
+    text-decoration: underline;
+    color : #3880ff;
+    font-weight: bold;
+    font-size: 18px;
+}
