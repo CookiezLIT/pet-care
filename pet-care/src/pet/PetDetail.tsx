@@ -14,11 +14,13 @@ import {
 import {useState} from "react";
 import updatePet from "../hooks/updatePet";
 import './PetDetail.css'
+import {useSelector} from "react-redux";
+import {IStore} from "../interfaces/IStore";
 
 const PetDetail = () => {
 
     const [editable, setEditable] = useState<boolean>(true);
-
+    const jwt_token = useSelector((state : IStore) => state.general.jwt_token);
     let full_url_splitted = window.location.href.split('/')
     let query_param = parseInt(full_url_splitted[full_url_splitted.length -1])
     console.log("Display view for pet number" +  query_param)
@@ -39,10 +41,11 @@ const PetDetail = () => {
                   new_pet_age,
                   new_pet_date_of_birth,
                   new_pet_is_adopted,
+                  jwt_token,
                     )
     }
 
-    const {pet} = usePet(query_param);
+    const {pet} = usePet(query_param,jwt_token);
     return (
 
             <IonPage>

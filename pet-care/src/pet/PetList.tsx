@@ -1,11 +1,16 @@
 import {IonContent, IonList, IonPage, IonText, IonFabButton} from "@ionic/react";
 import usePetList from '../hooks/usePetList'
-import { IPetList } from "../interfaces/IpetList";
 import PetListRow from "./PetListRow";
 import "./PetList.css"
+import {useSelector} from "react-redux";
+import {IStore} from "../interfaces/IStore";
+
+
 const PetList : React.FC = () => {
 
-    const {petList, handleAddPet} = usePetList()
+    const jwt_token = useSelector((state : IStore) => state.general.jwt_token);
+
+    const {petList, handleAddPet} = usePetList(jwt_token)
 
 
     return (

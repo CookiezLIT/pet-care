@@ -1,33 +1,16 @@
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonText, IonList, IonInput, IonLabel} from '@ionic/react';
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonInput, IonLabel} from '@ionic/react';
 import './PetHome.css';
 import usePetHome from "../hooks/usePetHome";
 import {getJWTToken} from "../utilities/getJWTToken";
 import {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {setJWT} from "../redux/generalActions";
+import {IGeneralReducer} from "../interfaces/IGeneralReducer";
+
 const PetHome : React.FC = () => {
 
-    const {connected} = usePetHome();
+    const {connected, handleUserNameInput, handlePasswordInput, handleLoginClick} = usePetHome();
 
-    const [userName, setUserName] = useState("");
-    const [password, setPassword] = useState("");
-
-    //get value from the username and password inputs
-    const handleUserNameInput = (e :any) => {
-        setUserName(e.target.value)
-
-    }
-    const handlePasswordInput = (e : any) => {
-        setPassword(e.target.value)
-    }
-
-    const handleLoginClick = async () => {
-        const response = await getJWTToken(userName,password);
-        console.log("Token from home")
-        response?.jwt_token?
-        window.location.href = "/pets"
-        :
-        window.alert("Login failed!")
-
-    }
 
     return (
         <IonPage>
