@@ -1,4 +1,3 @@
-import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
 
 export const getJWTToken = async (username : string, password : string) => {

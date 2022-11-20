@@ -1,6 +1,4 @@
-import {IPetDetail} from "../interfaces/IPetDetail";
 import usePet from "../hooks/usePet";
-import {useParams} from "react-router";
 import {
     IonContent,
     IonLabel,
