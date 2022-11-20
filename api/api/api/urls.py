@@ -10,7 +10,7 @@ urlpatterns = [
 
     #internal apps
     path('pets/',include('pets.urls')),
-
+    path('net_status/',include('net_status.urls')),
 
     #autenthications
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
