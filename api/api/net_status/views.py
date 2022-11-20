@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 class GetStatus(APIView):
     def get(self, request):
-        return HttpResponse("We are online",status=200)
+        return HttpResponse("true",status=200)

@@ -20,9 +20,13 @@ const PetHome : React.FC = () => {
     }
 
     const handleLoginClick = async () => {
-        const jwtToken = await getJWTToken(userName,password);
+        const response = await getJWTToken(userName,password);
         console.log("Token from home")
-        console.log(jwtToken)
+        response?.jwt_token?
+        window.location.href = "/pets"
+        :
+        window.alert("Login failed!")
+
     }
 
     return (
