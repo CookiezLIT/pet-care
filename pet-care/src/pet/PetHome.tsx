@@ -1,11 +1,29 @@
 import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonText, IonList, IonInput, IonLabel} from '@ionic/react';
 import './PetHome.css';
 import usePetHome from "../hooks/usePetHome";
+import {getJWTToken} from "../utilities/getJWTToken";
+import {useState} from "react";
 const PetHome : React.FC = () => {
 
     const {connected} = usePetHome();
 
+    const [userName, setUserName] = useState("");
+    const [password, setPassword] = useState("");
 
+    //get value from the username and password inputs
+    const handleUserNameInput = (e :any) => {
+        setUserName(e.target.value)
+
+    }
+    const handlePasswordInput = (e : any) => {
+        setPassword(e.target.value)
+    }
+
+    const handleLoginClick = async () => {
+        const jwtToken = await getJWTToken(userName,password);
+        console.log("Token from home")
+        console.log(jwtToken)
+    }
 
     return (
         <IonPage>
@@ -28,10 +46,10 @@ const PetHome : React.FC = () => {
 
                 <IonList>
                     <IonLabel className="login_label">Username</IonLabel>
-                    <IonInput id="username" className="login_input"></IonInput>
+                    <IonInput id="username" className="login_input" onIonInput={handleUserNameInput}></IonInput>
                     <IonLabel className="login_label">Password</IonLabel>
-                    <IonInput id="password" className="login_input"></IonInput>
-                    <IonButton>Login</IonButton>
+                    <IonInput id="password" className="login_input" onIonInput={handlePasswordInput}></IonInput>
+                    <IonButton onClick={handleLoginClick}>Login</IonButton>
                 </IonList>
             </IonContent>
         </IonPage>
