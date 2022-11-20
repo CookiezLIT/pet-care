@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "89724073-8a9f-45b6-930e-cdc148f7c412",
+		"name": "pdm_lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/pets/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTQwOTU4LCJpYXQiOjE2Njg5MzgyNTgsImp0aSI6IjQxMWRjNWJlYzkwNDQzNGM4ZDRlYjU4YzU5MzMxZTZlIiwidXNlcl9pZCI6MX0.5BCZcaqCexPOSySvl6i96UKp7lt-081ZoKWHdE-Zlgs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/pets/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"pets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/pets/add_pet/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTQwOTU4LCJpYXQiOjE2Njg5MzgyNTgsImp0aSI6IjQxMWRjNWJlYzkwNDQzNGM4ZDRlYjU4YzU5MzMxZTZlIiwidXNlcl9pZCI6MX0.5BCZcaqCexPOSySvl6i96UKp7lt-081ZoKWHdE-Zlgs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Tory\",\n    \"date_of_birth\":\"2016-06-16\",\n    \"is_adopted\":\"True\",\n    \"age\":16\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/pets/add_pet/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"pets",
+						"add_pet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/pets/update_pet/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTQwOTU4LCJpYXQiOjE2Njg5MzgyNTgsImp0aSI6IjQxMWRjNWJlYzkwNDQzNGM4ZDRlYjU4YzU5MzMxZTZlIiwidXNlcl9pZCI6MX0.5BCZcaqCexPOSySvl6i96UKp7lt-081ZoKWHdE-Zlgs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Rex\",\n    \"date_of_birth\" : \"2020-04-16\",\n    \"is_adopted\" : \"True\",\n    \"age\" : 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/pets/update_pet/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"pets",
+						"update_pet",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/pets/get_pet/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4OTQwOTU4LCJpYXQiOjE2Njg5MzgyNTgsImp0aSI6IjQxMWRjNWJlYzkwNDQzNGM4ZDRlYjU4YzU5MzMxZTZlIiwidXNlcl9pZCI6MX0.5BCZcaqCexPOSySvl6i96UKp7lt-081ZoKWHdE-Zlgs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/pets/get_pet/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"pets",
+						"get_pet",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/token/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dan-luciannita\",\n    \"password\":\"root\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/net_status/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/net_status/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"net_status",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
