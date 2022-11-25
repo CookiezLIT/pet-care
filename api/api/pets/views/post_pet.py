@@ -5,7 +5,7 @@ from pets.serializers.pet_serializer import PetSerializer
 from rest_framework.permissions import IsAuthenticated
 
 class PostPet(APIView):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def post(self, request):
         serializer = PetSerializer(data=request.data)
         if serializer.is_valid():
