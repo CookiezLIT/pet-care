@@ -35,7 +35,7 @@ const PetHome : React.FC = () => {
                     <IonLabel className="login_label">Username</IonLabel>
                     <IonInput id="username" className="login_input" onIonInput={handleUserNameInput}></IonInput>
                     <IonLabel className="login_label">Password</IonLabel>
-                    <IonInput id="password" className="login_input" onIonInput={handlePasswordInput}></IonInput>
+                    <IonInput id="password" className="login_input" type="password" onIonInput={handlePasswordInput}></IonInput>
                     <IonButton onClick={handleLoginClick}>Login</IonButton>
                 </IonList>
             </IonContent>
