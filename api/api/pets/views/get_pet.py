@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from rest_framework.permissions import IsAuthenticated
 
 class GetPet(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     def get(self, request, id):
         try:
             pet = Pet.objects.filter(id=id).first()

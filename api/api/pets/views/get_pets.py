@@ -5,7 +5,7 @@ from pets.serializers import PetSerializer
 from rest_framework.permissions import IsAuthenticated
 
 class GetPets(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     def get(self, request): 
         pets = Pet.objects.all()
         json_pets = PetSerializer(pets,many=True).data
